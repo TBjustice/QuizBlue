@@ -207,6 +207,7 @@ function onSaveProject(){
         bookmark:dummy2
     };
 
+    targetquiz = name;
     projecttitle.innerText = name;
     home.hidden=true;
     quizes.hidden=false;
