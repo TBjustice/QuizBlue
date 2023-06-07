@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="pageheader">
+        <h1 onclick="onReturnToHome()">Quiz Blue</h1>
+    </header>
+    
+    <main id="home">
+        <ul id="projectlist"></ul>
+    </main>
+
+    <main id="quizes" hidden>
+        <div id="projecttitle"></div>
+        <div class="inputs">
+            <label for="hide1check">
+                <input type="checkbox" id="hide1check" onchange="setActiveQuestion()">
+                Hide 1
+            </label>
+            <label for="hide2check">
+                <input type="checkbox" id="hide2check" onchange="setActiveQuestion()">
+                Hide 2
+            </label>
+            <button onclick="onHideBookmarks()">Hide Boolmarks</button>
+            <button onclick="onHideAll()" style="color:red;">Hide All(danger)</button>
+            <button onclick="onEditmode()">Edit</button>
+        </div>
+        <div id="quiz"></div>
+    </main>
+
+    <main id="quizedit" hidden>
+        <div class="inputs">
+            <input type="text" name="" id="projectname" value="No Name">
+            <button onclick="onSaveProject()">Save</button>
+        </div>
+        <textarea name="quizscript" id="quizscript" cols="30" rows="10"></textarea>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
