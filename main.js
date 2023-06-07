@@ -166,7 +166,7 @@ onHomepageInit();
 /* Edit Mode */
 
 function onNewProject(){
-    projectname.value = "No Name";
+    projectname.value = "NoName";
     quizscript.value = "";
     home.hidden=true;
     quizes.hidden=true;
@@ -189,7 +189,8 @@ function onSaveProject(){
         quizscript.setSelectionRange(valid[0], valid[1]);
         return;
     }
-    const name = projectname.value;
+    let name = projectname.value;
+    name = name.replaceAll(" ", "");
     if(name.length == 0){
         alert("Name the project!");
         return;
